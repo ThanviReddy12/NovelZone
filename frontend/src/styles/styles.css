@@ -1,0 +1,50 @@
+/* styles.css */
+/* Auth pages */
+.auth-container {
+  max-width: 400px;         /* Increased from 320px */
+  margin: 4rem auto;        /* Slightly increased vertical margin */
+  background: #FFCDB2;
+  padding: 2.5rem;          /* Increased padding for more space inside */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Slightly enhanced shadow */
+}
+
+.auth-container h2 {
+  color: #B5828C;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 0.75rem;         /* Slightly more padding for a better feel */
+  margin: 0.6rem 0;
+  border-radius: 6px;
+  border: 1px solid #E5989B;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #E5989B;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background: #B5828C;
+}
+.logout-button {
+  padding: 0.8rem;
+  background: rgb(181, 130, 140);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size:16px;
+}
+
+.logout-button:hover {
+  background-color: #883c62; /* darker accent */
+  
+}

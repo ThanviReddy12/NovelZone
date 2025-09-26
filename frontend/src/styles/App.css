@@ -1,0 +1,98 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #FFF3F0; /* very light peach */
+  color: #333;
+}
+final
+.navbar {
+  background-color: #B5828C;
+  padding: 0.8rem 1.4rem;
+  display: flex;
+  justify-content: space-between; /* spread left and right groups */
+  align-items: center; /* vertical center */
+  gap: 1.2rem;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* space between links and controls */
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-size: 1.05rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #883c62;
+  transform: scale(1.05);
+}
+.navbar {
+  background-color: #B5828C;
+  padding: 0.8rem 1.4rem;
+  display: flex;
+  justify-content: space-between;  /* spread left and right */
+  align-items: center;             /* vertical center */
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;                      /* consistent spacing between items */
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-size: 1.05rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #883c62;
+  transform: scale(1.05);
+}
+
+.shortcut-info {
+  margin-left: 4px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  user-select: none;
+}
+
+.tooltip {
+  position: absolute;
+  top: 28px;
+  left: 70%;
+  transform: translateX(-50%);
+  background:#9E6A7A  ;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 14px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  pointer-events: none;
+}
+
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* small gap between input, button, info icon */
+}
+

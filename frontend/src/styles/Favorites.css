@@ -1,0 +1,125 @@
+/* src/styles/Favorites.css */
+
+/* Page wrapper */
+.favorites-page {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.favorites-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* No favorites message */
+.no-fav-msg {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+
+/* Grid container */
+.favorites-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 cards per row */
+  gap: 16px;
+  justify-items: center;  /* center cards in their grid cells */
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1000px) {
+  .favorites-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .favorites-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .favorites-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Individual favorite card */
+.favorite-card {
+  width: 180px;                /* fixed narrower width */
+  background-color: #fff;
+  padding: 10px;               /* reduced padding */
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.favorite-card:hover {
+  transform: translateY(-4px);
+}
+
+.favorite-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+/* Book title and author */
+.favorite-info h4 {
+  margin: 8px 0 4px;
+  font-size: 14px;    /* smaller font */
+  font-weight: bold;
+}
+
+.favorite-info p {
+  font-size: 12px;    /* smaller font */
+  color: #666;
+}
+.remove-fav-btn {
+  background-color: rgb(251, 249, 249);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.favorites-page h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color:#B5828C
+}
+.no-favorites-text {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #777; /* Light grey for the text */
+  margin-top: 20px;
+  font-style: italic;
+}
+.remove-fav-btn {
+  background-color: #ffe6e6;
+  border: 1px solid #ff4d4d;
+  color: #b30000;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.remove-fav-btn:hover {
+  background-color: #ffcccc;
+  color: #800000;
+  border-color: #cc0000;
+}

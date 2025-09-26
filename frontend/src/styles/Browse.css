@@ -1,0 +1,342 @@
+/* 📚 Book Grid */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 24px; /* Space between cards */
+  max-width: 1168px; /* 4 * 280 + 3 * 24 = 1168px */
+  margin: 0 auto;
+  padding: 0;
+  justify-content: start;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* 📖 Book Card */
+.book-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;       /* fill grid cell */
+  max-width: 280px;  /* increased width */
+  margin: 0 auto;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+}
+
+
+/* 🔄 Book Image */
+.book-image {
+  width: 160px; /* ✅ Bigger size */
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  border: 3px solid #E5989B; /* ✅ Coral border */
+}
+
+/* 📖 Title & Author Styling */
+.book-card h3, .book-card p {
+  display: block; /* ✅ Ensure visibility */
+  text-align: center;
+  width: 100%;
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  color: #B5828C; /* ✅ Matches Navbar */
+  margin-bottom: 6px;
+}
+
+.book-card p {
+  font-size: 0.95rem;
+  color: #555; /* ✅ Readability */
+  margin-bottom: 10px;
+}
+
+/* ❤️ Add to Favorites Button */
+.fav-btn {
+  background-color: #E5989B; /* ✅ Coral */
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 12px;
+}
+
+.fav-btn:hover {
+  background-color: #B5828C; /* ✅ Dusty purple */
+  transform: scale(1.05);
+}
+
+.fav-btn:disabled {
+  background-color: #FFCDB2; /* ✅ Soft peach */
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+/* 🎭 Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1000;
+  overflow-y: auto; /* ✅ Enable scrolling if modal overflows */
+}
+
+/* 📖 Modal Content */
+.modal-content {
+  background: #FFE8D6; /* ✅ Light background */
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  max-height: 90vh; /* ✅ Limit height */
+  overflow-y: auto; /* ✅ Scroll inside modal if needed */
+}
+
+/* 🔄 Book Image Inside Modal */
+.modal-left img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* 🖊️ Modal Right - Book Details */
+.modal-right {
+  flex: 1;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-right h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.modal-right p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.4rem 0;
+}
+
+.modal-right a {
+  color: #B5828C;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.modal-right a:hover {
+  text-decoration: underline;
+}
+
+/* 🔄 Responsive Modal Adjustments */
+@media (max-width: 600px) {
+  .modal-content {
+    flex-direction: column;
+    align-items: center;
+    max-height: 90vh;
+  }
+  .modal-right {
+    margin-left: 0;
+  }
+}
+
+.stars {
+  margin-left: 6px;
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
+.review-section {
+  margin-top: 30px;
+}
+
+.review-textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.submit-review-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-left:8px;
+  cursor: pointer;
+}
+
+.submit-review-btn:hover {
+  background-color: #45a049;
+}
+
+.reviews-list {
+  margin-top: 20px;
+}
+
+.review-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.browse-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color:#B5828C;
+}
+.search-form {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.search-input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: -28px;
+  color: #333;
+}
+.no-books-text {
+  text-align: center;
+  color: #999;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+.upvote-section {
+  margin-top: 5px;
+}
+
+.upvote-btn {
+  background-color: #883c62;
+  color: white;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: transform 0.1s ease;
+}
+
+.upvote-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.upvote-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+.filters-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  margin-top:8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filters-container .filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filters-container label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  white-space: nowrap;
+  margin-left:10px;
+}
+
+.filters-container .filter-select {
+  padding: 6px 12px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.filters-container .filter-select:focus {
+  border-color: #B5828C;
+  outline: none;
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .filters-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .filters-container .filter-group {
+    width: 100%;
+  }
+
+  .filters-container .filter-select {
+    width: 100%;
+  }
+}
+/* Remove default outline and blue highlight on select and options */
+.filter-select {
+  outline: none;
+  /* You can add other styles */
+}
+
+/* For some browsers, to avoid blue background on focused option */
+.filter-select option:focus,
+.filter-select option:hover {
+  background-color:#B5828C ; /* or any color you want */
+  color: #000;
+}
+
+/* Also, for removing outline on select when focused */
+.filter-select:focus {
+  outline: none;
+  box-shadow: none;
+}
+

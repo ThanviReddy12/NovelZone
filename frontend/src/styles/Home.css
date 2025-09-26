@@ -1,0 +1,172 @@
+/* 🌟 Global Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 🎨 Home Page Background */
+.home-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #f8eee9, #f5d7d0); /* ✅ Matches Navbar */
+    color: #333; /* ✅ Ensures readability */
+    text-align: center;
+    padding-top: 2rem;
+}
+
+/* ✨ Title & Tagline - Highlighted */
+.title-section {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3rem;
+}
+
+.title-section .title {
+    font-size: 4rem;
+    font-weight: 900;
+    color:#B5828C ; /* ✅ Matches Navbar */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.5rem;
+}
+
+.title-section .tagline {
+    font-size: 1.4rem;
+    color: #E5989B; /* ✅ Soft accent */
+    font-style: italic;
+}
+
+/* 💬 Testimonials - Neat Cards */
+.testimonial-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0 4rem;
+}
+
+.testimonial-card {
+    background: #b78394; /* ✅ Matches Navbar */
+    border-radius: 12px;
+    padding: 1.6rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.reader {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #e3c6cc;
+    font-weight: 500;
+}
+
+/* 🎯 Browse Button */
+.browse-btn {
+    padding: 12px 26px;
+    background: #B5828C; /* ✅ Matches Navbar */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+}
+/* 🎯 Browse Button - Add Margin Above */
+.browse-btn-container {
+    margin-top: 0.4rem; /* ✅ Added extra space */
+}
+.browse-btn:hover {
+    background: #E5989B;
+    transform: scale(1.07);
+}
+/* 📚 Featured Books Section */
+.featured {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 2rem;
+    color: #B5828C;
+    margin-bottom: 2rem;
+}
+
+/* 🎴 Grid Layout for Book Cards */
+.featured .book-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* ✅ Adds spacing between cards */
+    justify-items: center;
+}
+
+/* 📘 Book Card Styling */
+.featured .book-card {
+    width: 200px;  /* ✅ Increased size */
+    height: 300px; /* ✅ Fixed height for uniform look */
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🖼️ Book Image Styling */
+.featured .book-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ✅ Fully covers the card without distortion */
+    display: block;
+    border-radius: 12px;
+}
+
+/* 🎯 Hover Effect */
+.featured .book-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌟 Why Choose NovelZone */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 2rem 0 3rem;
+}
+
+.feature-box {
+    background-color: #eda08d; /* ✅ Soft accent */
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    min-width: 170px;
+    font-weight: 600;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
